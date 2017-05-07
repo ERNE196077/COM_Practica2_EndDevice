@@ -115,7 +115,7 @@ clean:
 	-@echo ' '
 
 pre-build:
-	-arm-none-eabi-gcc -E -x c -P -Iinclude "C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/boards/frdmkw24/wireless_examples/thread/end_device/freertos/kds/../../../../../../../middleware/wireless/framework_5.0.5/Common/devices/MKW24D5/gcc/MKW24D512xxx5_connectivity.lld" -o "C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/boards/frdmkw24/wireless_examples/thread/end_device/freertos/kds/MKW24D512xxx5_connectivity.ld" -DgUseBootloaderLink_d=0 -DgUseInternalStorageLink_d=0 -DgUseNVMLink_d=1 -D__ram_vector_table__=1 -DgNVMSectorCountLink_d=16 -DgEraseNVMLink_d=1
+	-arm-none-eabi-gcc -E -x c -P -Iinclude "C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/boards/frdmkw24/wireless_examples/thread/end_device/freertos/kds/../../../../../../../middleware/wireless/framework_5.0.5/Common/devices/MKW24D5/gcc/MKW24D512xxx5_connectivity.lld" -o "C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/boards/frdmkw24/wireless_examples/thread/end_device/freertos/kds/MKW24D512xxx5_connectivity.ld" -DgUseBootloaderLink_d=0 -DgUseInternalStorageLink_d=0 -DgUseNVMLink_d=1 -D__ram_vector_table__=1 -DgNVMSectorCountLink_d=16 -DgEraseNVMLink_d=1
 	-@echo ' '
 
 secondary-outputs: $(SECONDARY_FLASH)

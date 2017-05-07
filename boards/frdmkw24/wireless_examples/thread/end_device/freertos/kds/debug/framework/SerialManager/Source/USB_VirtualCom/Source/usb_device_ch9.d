@@ -1,5 +1,5 @@
 framework/SerialManager/Source/USB_VirtualCom/Source/usb_device_ch9.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_ch9.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_ch9.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -7,7 +7,7 @@ framework/SerialManager/Source/USB_VirtualCom/Source/usb_device_ch9.o: \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/base/interface/debug_log.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/Common/EmbeddedTypes.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_mac_config.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_config.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_config.h \
  ../../../../../../../../middleware/usb_1.1.0/include/usb.h \
  ../../../../../../../../middleware/usb_1.1.0/osa/usb_osa.h \
  ../../../../../../../../middleware/usb_1.1.0/osa/usb_osa_freertos.h \
@@ -28,8 +28,8 @@ framework/SerialManager/Source/USB_VirtualCom/Source/usb_device_ch9.o: \
  ../../../../../../../../middleware/usb_1.1.0/include/usb_spec.h \
  ../../../../../../../../middleware/usb_1.1.0/device/usb_device.h \
  ../../../../../../../../middleware/usb_1.1.0/device/usb_device_dci.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_class.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_ch9.h
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_class.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_ch9.h
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h:
 
@@ -45,7 +45,7 @@ framework/SerialManager/Source/USB_VirtualCom/Source/usb_device_ch9.o: \
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_mac_config.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_config.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_config.h:
 
 ../../../../../../../../middleware/usb_1.1.0/include/usb.h:
 
@@ -87,6 +87,6 @@ C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.
 
 ../../../../../../../../middleware/usb_1.1.0/device/usb_device_dci.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_class.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_class.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_ch9.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SerialManager/Source/USB_VirtualCom/usb_device_ch9.h:

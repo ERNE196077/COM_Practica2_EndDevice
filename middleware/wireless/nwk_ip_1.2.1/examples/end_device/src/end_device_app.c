@@ -1447,6 +1447,8 @@ static void APP_AccCallback(void)
 	default:
 		break;
 	}
+
+    shell_printf("\t TEST DIJE\n\r");
 	Led_UpdateRgbState(redValue, greenValue, blueValue);
 	App_UpdateStateLeds(gDeviceState_AppLedRgb_c);
 	mAccLastEvent = gAppAccNoEvent_c;

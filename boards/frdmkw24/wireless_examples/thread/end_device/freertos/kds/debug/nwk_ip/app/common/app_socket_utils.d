@@ -1,5 +1,5 @@
 nwk_ip/app/common/app_socket_utils.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_socket_utils.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_socket_utils.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -19,10 +19,10 @@ nwk_ip/app/common/app_socket_utils.o: \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/thread_stack_config.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/OSAbstraction/Interface/fsl_os_abstraction.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/OSAbstraction/Interface/fsl_os_abstraction_config.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_socket_utils.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_socket_utils.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/TimersManager/Interface/TimersManager.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_temp_sensor.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_temp_sensor.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/sockets.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/network_utils.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/udp.h \
@@ -69,13 +69,13 @@ nwk_ip/app/common/app_socket_utils.o: \
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/OSAbstraction/Interface/fsl_os_abstraction_config.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_socket_utils.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_socket_utils.h:
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/TimersManager/Interface/TimersManager.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_temp_sensor.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_temp_sensor.h:
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/sockets.h:
 

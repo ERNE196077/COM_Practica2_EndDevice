@@ -1,5 +1,5 @@
 nwk_ip/app/common/app_echo_udp.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_echo_udp.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_echo_udp.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -23,15 +23,15 @@ nwk_ip/app/common/app_echo_udp.o: \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/ip.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/network_utils.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/TimersManager/Interface/TimersManager.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_thread_config.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_thread_config.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/stack_manager_if.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/sixlowpan_ib.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/base/interface/mac_abs_802154.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/base/interface/mac_abs_types.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/nd.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/nd_tables.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_init.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_init.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/LED/Interface/LED.h \
  ../../board.h ../../../../../../../../devices/MKW24D5/drivers/fsl_gpio.h \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_common.h \
@@ -47,7 +47,7 @@ nwk_ip/app/common/app_echo_udp.o: \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_clock.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/version.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/session.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_echo_udp.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_echo_udp.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/Shell/Interface/shell.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/Shell/Interface/shell_config.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/SerialManager/Interface/SerialManager.h
@@ -98,9 +98,9 @@ nwk_ip/app/common/app_echo_udp.o: \
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/TimersManager/Interface/TimersManager.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_thread_config.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_thread_config.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h:
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/stack_manager_if.h:
 
@@ -114,7 +114,7 @@ C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/nd_tables.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_init.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_init.h:
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/LED/Interface/LED.h:
 
@@ -148,7 +148,7 @@ C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/session.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_echo_udp.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_echo_udp.h:
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/Shell/Interface/shell.h:
 

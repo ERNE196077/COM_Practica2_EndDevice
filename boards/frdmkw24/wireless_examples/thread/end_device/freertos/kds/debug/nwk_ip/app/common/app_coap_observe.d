@@ -1,5 +1,5 @@
 nwk_ip/app/common/app_coap_observe.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_coap_observe.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_coap_observe.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -8,7 +8,7 @@ nwk_ip/app/common/app_coap_observe.o: \
  ../../../../../../../../middleware/wireless/framework_5.0.5/Common/EmbeddedTypes.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_mac_config.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/FunctionLib/FunctionLib.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_coap_observe.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_coap_observe.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/network_utils.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/stack_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/thread_stack_config.h \
@@ -59,7 +59,7 @@ nwk_ip/app/common/app_coap_observe.o: \
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/FunctionLib/FunctionLib.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_coap_observe.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_coap_observe.h:
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/network_utils.h:
 

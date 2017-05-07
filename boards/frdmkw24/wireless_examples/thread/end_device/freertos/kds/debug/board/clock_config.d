@@ -1,5 +1,5 @@
 board/clock_config.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/boards/frdmkw24/wireless_examples/thread/end_device/freertos/clock_config.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/boards/frdmkw24/wireless_examples/thread/end_device/freertos/clock_config.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -21,7 +21,7 @@ board/clock_config.o: \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_clock.h \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_rtc.h \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_port.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/boards/frdmkw24/wireless_examples/thread/end_device/freertos/clock_config.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/boards/frdmkw24/wireless_examples/thread/end_device/freertos/clock_config.h \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_common.h
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h:
@@ -66,6 +66,6 @@ board/clock_config.o: \
 
 ../../../../../../../../devices/MKW24D5/drivers/fsl_port.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/boards/frdmkw24/wireless_examples/thread/end_device/freertos/clock_config.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/boards/frdmkw24/wireless_examples/thread/end_device/freertos/clock_config.h:
 
 ../../../../../../../../devices/MKW24D5/drivers/fsl_common.h:

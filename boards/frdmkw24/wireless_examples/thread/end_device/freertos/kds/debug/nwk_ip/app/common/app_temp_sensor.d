@@ -1,5 +1,5 @@
 nwk_ip/app/common/app_temp_sensor.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_temp_sensor.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_temp_sensor.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -29,7 +29,7 @@ nwk_ip/app/common/app_temp_sensor.o: \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_clock.h \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_adc16.h \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_pmc.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_temp_sensor.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_temp_sensor.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/FunctionLib/FunctionLib.h
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h:
@@ -92,6 +92,6 @@ nwk_ip/app/common/app_temp_sensor.o: \
 
 ../../../../../../../../devices/MKW24D5/drivers/fsl_pmc.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_temp_sensor.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_temp_sensor.h:
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/FunctionLib/FunctionLib.h:

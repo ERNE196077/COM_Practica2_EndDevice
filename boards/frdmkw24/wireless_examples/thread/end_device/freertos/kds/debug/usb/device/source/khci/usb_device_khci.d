@@ -1,5 +1,5 @@
 usb/device/source/khci/usb_device_khci.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/usb_1.1.0/device/usb_device_khci.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/usb_1.1.0/device/usb_device_khci.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -26,7 +26,7 @@ usb/device/source/khci/usb_device_khci.o: \
  ../../../../../../../../rtos/freertos_8.2.3/Source/include/list.h \
  ../../../../../../../../middleware/usb_1.1.0/include/usb_misc.h \
  ../../../../../../../../middleware/usb_1.1.0/include/usb_spec.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/usb_1.1.0/device/usb_device.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/usb_1.1.0/device/usb_device.h \
  ../../../../../../../../devices/MKW24D5/fsl_device_registers.h \
  ../../../../../../../../devices/MKW24D5/MKW24D5.h \
  ../../../../../../../../CMSIS/Include/core_cm4.h \
@@ -37,8 +37,8 @@ usb/device/source/khci/usb_device_khci.o: \
  ../../../../../../../../devices/MKW24D5/system_MKW24D5.h \
  ../../../../../../../../devices/MKW24D5/MKW24D5_features.h \
  ../../../../../../../../middleware/usb_1.1.0/include/usb_khci.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/usb_1.1.0/device/usb_device_dci.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/usb_1.1.0/device/usb_device_khci.h
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/usb_1.1.0/device/usb_device_dci.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/usb_1.1.0/device/usb_device_khci.h
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h:
 
@@ -92,7 +92,7 @@ usb/device/source/khci/usb_device_khci.o: \
 
 ../../../../../../../../middleware/usb_1.1.0/include/usb_spec.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/usb_1.1.0/device/usb_device.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/usb_1.1.0/device/usb_device.h:
 
 ../../../../../../../../devices/MKW24D5/fsl_device_registers.h:
 
@@ -114,6 +114,6 @@ C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/usb_1.1.0/device/usb_
 
 ../../../../../../../../middleware/usb_1.1.0/include/usb_khci.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/usb_1.1.0/device/usb_device_dci.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/usb_1.1.0/device/usb_device_dci.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/usb_1.1.0/device/usb_device_khci.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/usb_1.1.0/device/usb_device_khci.h:

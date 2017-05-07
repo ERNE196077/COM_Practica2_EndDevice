@@ -1,5 +1,5 @@
 ieee_802.15.4/phy/source/PhyStateMachine.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/ieee_802_15_4_5.0.5/phy/source/MCR20A/PhyStateMachine.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/ieee_802_15_4_5.0.5/phy/source/MCR20A/PhyStateMachine.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -15,7 +15,7 @@ ieee_802.15.4/phy/source/PhyStateMachine.o: \
  ../../../../../../../../middleware/wireless/framework_5.0.5/Messaging/Interface/Messaging.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/Lists/GenericList.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/MemManager/Interface/MemManager.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/ieee_802_15_4_5.0.5/phy/source/MCR20A/Phy.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/ieee_802_15_4_5.0.5/phy/source/MCR20A/Phy.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/FunctionLib/FunctionLib.h \
  ../../../../../../../../middleware/wireless/ieee_802_15_4_5.0.5/phy/source/MCR20A/MCR20Drv/MCR20Drv.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/GPIO/GPIO_Adapter.h \
@@ -63,7 +63,7 @@ ieee_802.15.4/phy/source/PhyStateMachine.o: \
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/MemManager/Interface/MemManager.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/ieee_802_15_4_5.0.5/phy/source/MCR20A/Phy.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/ieee_802_15_4_5.0.5/phy/source/MCR20A/Phy.h:
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/FunctionLib/FunctionLib.h:
 

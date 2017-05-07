@@ -1,5 +1,5 @@
 nwk_ip/app/common/app_init.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_init.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_init.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -41,11 +41,11 @@ nwk_ip/app/common/app_init.o: \
  ../../../../../../../../middleware/wireless/framework_5.0.5/SerialManager/Interface/SerialManager.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/Panic/Interface/Panic.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/SecLib/SecLib.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_init.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_init.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/network_utils.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/stack_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/thread_stack_config.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/thread/thread_network.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/stack_manager_if.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/stack_config.h \
@@ -156,7 +156,7 @@ nwk_ip/app/common/app_init.o: \
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/SecLib/SecLib.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_init.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_init.h:
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/network_utils.h:
 
@@ -164,7 +164,7 @@ C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/modules/thread_stack_config.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h:
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/core/interface/thread/thread_network.h:
 

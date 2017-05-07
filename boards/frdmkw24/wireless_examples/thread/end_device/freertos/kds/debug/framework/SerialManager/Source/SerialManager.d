@@ -1,5 +1,5 @@
 framework/SerialManager/Source/SerialManager.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SerialManager/Source/SerialManager.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SerialManager/Source/SerialManager.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -30,7 +30,7 @@ framework/SerialManager/Source/SerialManager.o: \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_clock.h \
  ../../pin_mux.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/NVM/Interface/NVM_Interface.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SerialManager/Source/UART_Adapter.h
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SerialManager/Source/UART_Adapter.h
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h:
 
@@ -92,4 +92,4 @@ framework/SerialManager/Source/SerialManager.o: \
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/NVM/Interface/NVM_Interface.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SerialManager/Source/UART_Adapter.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SerialManager/Source/UART_Adapter.h:

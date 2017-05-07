@@ -1,5 +1,5 @@
 framework/FSCI/Source/FsciMain.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/FSCI/Source/FsciMain.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/FSCI/Source/FsciMain.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -9,8 +9,8 @@ framework/FSCI/Source/FsciMain.o: \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_mac_config.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/FSCI/Interface/FsciInterface.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/SerialManager/Interface/SerialManager.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/FSCI/Source/FsciCommands.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/FSCI/Source/FsciCommunication.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/FSCI/Source/FsciCommands.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/FSCI/Source/FsciCommunication.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/TimersManager/Interface/TimersManager.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/OSAbstraction/Interface/fsl_os_abstraction.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/OSAbstraction/Interface/fsl_os_abstraction_config.h \
@@ -36,9 +36,9 @@ framework/FSCI/Source/FsciMain.o: \
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/SerialManager/Interface/SerialManager.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/FSCI/Source/FsciCommands.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/FSCI/Source/FsciCommands.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/FSCI/Source/FsciCommunication.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/FSCI/Source/FsciCommunication.h:
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/TimersManager/Interface/TimersManager.h:
 

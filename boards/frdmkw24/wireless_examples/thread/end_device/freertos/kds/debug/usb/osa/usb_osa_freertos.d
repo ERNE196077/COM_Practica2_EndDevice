@@ -1,5 +1,5 @@
 usb/osa/usb_osa_freertos.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/usb_1.1.0/osa/usb_osa_freertos.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/usb_1.1.0/osa/usb_osa_freertos.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -34,7 +34,7 @@ usb/osa/usb_osa_freertos.o: \
  ../../../../../../../../rtos/freertos_8.2.3/Source/include/list.h \
  ../../../../../../../../middleware/usb_1.1.0/include/usb_misc.h \
  ../../../../../../../../middleware/usb_1.1.0/include/usb_spec.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/usb_1.1.0/osa/usb_osa.h
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/usb_1.1.0/osa/usb_osa.h
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h:
 
@@ -104,4 +104,4 @@ usb/osa/usb_osa_freertos.o: \
 
 ../../../../../../../../middleware/usb_1.1.0/include/usb_spec.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/usb_1.1.0/osa/usb_osa.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/usb_1.1.0/osa/usb_osa.h:

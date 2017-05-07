@@ -1,5 +1,5 @@
 board/pin_mux.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/boards/frdmkw24/wireless_examples/thread/end_device/freertos/pin_mux.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/boards/frdmkw24/wireless_examples/thread/end_device/freertos/pin_mux.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -20,7 +20,7 @@ board/pin_mux.o: \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_clock.h \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_port.h \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_common.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/boards/frdmkw24/wireless_examples/thread/end_device/freertos/pin_mux.h
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/boards/frdmkw24/wireless_examples/thread/end_device/freertos/pin_mux.h
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h:
 
@@ -62,4 +62,4 @@ board/pin_mux.o: \
 
 ../../../../../../../../devices/MKW24D5/drivers/fsl_common.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/boards/frdmkw24/wireless_examples/thread/end_device/freertos/pin_mux.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/boards/frdmkw24/wireless_examples/thread/end_device/freertos/pin_mux.h:

@@ -1,5 +1,5 @@
 freertos/portable/port.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/rtos/freertos_8.2.3/Source/portable/GCC/ARM_CM3/port.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/rtos/freertos_8.2.3/Source/portable/GCC/ARM_CM3/port.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \

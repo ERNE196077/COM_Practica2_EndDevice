@@ -278,7 +278,7 @@ void* App_GetAccelDataString
     static uint8_t sendAccelerationData [ACCEL_BUFF_SIZE] = {0};
     
     /* Accel strings */
-    const uint8_t sX[] = "X= ";
+    const uint8_t sX[] = "DIJEX= ";
     const uint8_t sY[] = "Y= ";
     const uint8_t sZ[] = "Z= ";
     const uint8_t sUnknown[] = "Unknown parameter";

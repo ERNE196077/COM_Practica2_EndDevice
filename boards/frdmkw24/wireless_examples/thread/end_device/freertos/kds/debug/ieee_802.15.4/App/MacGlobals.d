@@ -1,5 +1,5 @@
 ieee_802.15.4/App/MacGlobals.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/ieee_802_15_4_5.0.5/mac/source/App/MacGlobals.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/ieee_802_15_4_5.0.5/mac/source/App/MacGlobals.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -9,7 +9,7 @@ ieee_802.15.4/App/MacGlobals.o: \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_mac_config.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/OSAbstraction/Interface/fsl_os_abstraction.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/OSAbstraction/Interface/fsl_os_abstraction_config.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/ieee_802_15_4_5.0.5/mac/source/App/MacGlobals.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/ieee_802_15_4_5.0.5/mac/source/App/MacGlobals.h \
  ../../../../../../../../middleware/wireless/ieee_802_15_4_5.0.5/mac/interface/MacInterface.h \
  ../../../../../../../../middleware/wireless/ieee_802_15_4_5.0.5/mac/interface/MacTypes.h \
  ../../../../../../../../middleware/wireless/ieee_802_15_4_5.0.5/mac/interface/MacFunctionalityDefines.h \
@@ -43,7 +43,7 @@ ieee_802.15.4/App/MacGlobals.o: \
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/OSAbstraction/Interface/fsl_os_abstraction_config.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/ieee_802_15_4_5.0.5/mac/source/App/MacGlobals.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/ieee_802_15_4_5.0.5/mac/source/App/MacGlobals.h:
 
 ../../../../../../../../middleware/wireless/ieee_802_15_4_5.0.5/mac/interface/MacInterface.h:
 

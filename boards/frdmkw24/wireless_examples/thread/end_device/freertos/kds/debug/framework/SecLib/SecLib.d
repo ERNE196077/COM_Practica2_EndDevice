@@ -1,5 +1,5 @@
 framework/SecLib/SecLib.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SecLib/SecLib.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SecLib/SecLib.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -10,7 +10,7 @@ framework/SecLib/SecLib.o: \
  ../../../../../../../../middleware/wireless/framework_5.0.5/MemManager/Interface/MemManager.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/Lists/GenericList.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/FunctionLib/FunctionLib.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SecLib/SecLib.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SecLib/SecLib.h \
  ../../../../../../../../devices/MKW24D5/fsl_device_registers.h \
  ../../../../../../../../devices/MKW24D5/MKW24D5.h \
  ../../../../../../../../CMSIS/Include/core_cm4.h \
@@ -45,7 +45,7 @@ framework/SecLib/SecLib.o: \
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/FunctionLib/FunctionLib.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/SecLib/SecLib.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/SecLib/SecLib.h:
 
 ../../../../../../../../devices/MKW24D5/fsl_device_registers.h:
 

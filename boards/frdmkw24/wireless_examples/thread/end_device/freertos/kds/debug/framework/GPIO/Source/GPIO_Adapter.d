@@ -1,5 +1,5 @@
 framework/GPIO/Source/GPIO_Adapter.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/GPIO/GPIO_Adapter.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/GPIO/GPIO_Adapter.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -22,7 +22,7 @@ framework/GPIO/Source/GPIO_Adapter.o: \
  ../../../../../../../../devices/MKW24D5/drivers/fsl_port.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/OSAbstraction/Interface/fsl_os_abstraction.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/OSAbstraction/Interface/fsl_os_abstraction_config.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/GPIO/GPIO_Adapter.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/GPIO/GPIO_Adapter.h \
  ../../gpio_pins.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/GPIO/GPIO_Adapter.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/FunctionLib/FunctionLib.h
@@ -71,7 +71,7 @@ framework/GPIO/Source/GPIO_Adapter.o: \
 
 ../../../../../../../../middleware/wireless/framework_5.0.5/OSAbstraction/Interface/fsl_os_abstraction_config.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/framework_5.0.5/GPIO/GPIO_Adapter.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/framework_5.0.5/GPIO/GPIO_Adapter.h:
 
 ../../gpio_pins.h:
 

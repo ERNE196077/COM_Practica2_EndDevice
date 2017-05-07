@@ -1,5 +1,5 @@
 drivers/fsl_clock.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/devices/MKW24D5/drivers/fsl_clock.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/devices/MKW24D5/drivers/fsl_clock.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
@@ -7,7 +7,7 @@ drivers/fsl_clock.o: \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/base/interface/debug_log.h \
  ../../../../../../../../middleware/wireless/framework_5.0.5/Common/EmbeddedTypes.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_mac_config.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/devices/MKW24D5/drivers/fsl_common.h \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/devices/MKW24D5/drivers/fsl_common.h \
  ../../../../../../../../devices/MKW24D5/fsl_device_registers.h \
  ../../../../../../../../devices/MKW24D5/MKW24D5.h \
  ../../../../../../../../CMSIS/Include/core_cm4.h \
@@ -17,7 +17,7 @@ drivers/fsl_clock.o: \
  ../../../../../../../../CMSIS/Include/core_cmSimd.h \
  ../../../../../../../../devices/MKW24D5/system_MKW24D5.h \
  ../../../../../../../../devices/MKW24D5/MKW24D5_features.h \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/devices/MKW24D5/drivers/fsl_clock.h
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/devices/MKW24D5/drivers/fsl_clock.h
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h:
 
@@ -33,7 +33,7 @@ drivers/fsl_clock.o: \
 
 ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_mac_config.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/devices/MKW24D5/drivers/fsl_common.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/devices/MKW24D5/drivers/fsl_common.h:
 
 ../../../../../../../../devices/MKW24D5/fsl_device_registers.h:
 
@@ -53,4 +53,4 @@ C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/devices/MKW24D5/drivers/fsl_comm
 
 ../../../../../../../../devices/MKW24D5/MKW24D5_features.h:
 
-C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/devices/MKW24D5/drivers/fsl_clock.h:
+C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/devices/MKW24D5/drivers/fsl_clock.h:

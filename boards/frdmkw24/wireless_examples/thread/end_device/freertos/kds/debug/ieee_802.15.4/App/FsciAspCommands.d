@@ -1,5 +1,5 @@
 ieee_802.15.4/App/FsciAspCommands.o: \
- C:/Users/ernesto/workspace.kds/fkw24_KDS_lab_ed/middleware/wireless/ieee_802_15_4_5.0.5/mac/source/App/FsciAspCommands.c \
+ C:/Users/ernesto/workspace.kds/COM_Practica2_EndDevice/middleware/wireless/ieee_802_15_4_5.0.5/mac/source/App/FsciAspCommands.c \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/end_device/config/config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_config.h \
  ../../../../../../../../middleware/wireless/nwk_ip_1.2.1/examples/common/app_stack_config.h \
