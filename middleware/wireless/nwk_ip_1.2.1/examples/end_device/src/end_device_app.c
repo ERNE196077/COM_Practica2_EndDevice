@@ -120,7 +120,7 @@ static bool_t mJoiningIsAppInitiated = FALSE;
 
 /*@Lab - Application Timer*/
 static tmrTimerID_t mLEDOffTimerID = gTmrInvalidTimerID_c;
-static tmrTimerID_t mEquipo4GETTimerID = gTmrInvalidTimerID_c;
+static tmrTimerID_t mEquipo4GETTimerID = gTmrInvalidTimerID_c;              /////////CAMBIOS
 /*@Lab - Private global variables*/
 static uint8_t mAccLastEvent = gAppAccNoEvent_c;
 
@@ -152,13 +152,12 @@ static void APP_CoapSinkCb(coapSessionStatus_t sessionStatus, void *pData, coapS
 /*@Lab - Private prototypes*/
 static void Accel_Callback(uint8_t events);
 static void APP_ReportAccel(void *pParam);
+static void APP_ReportEquipo4(void *pParam);         ///////////CAMBIOS
 static void timerTurnOffLEDsCB(void *param);
 static void APP_CoapAccelCb(coapSessionStatus_t sessionStatus,void *pData,coapSession_t *pSession,uint32_t dataLen);
-static void APP_CoapEquipo4Cb(coapSessionStatus_t sessionStatus,void *pData,coapSession_t *pSession,uint32_t dataLen);
 static void APP_AccCallback(void);
-
-static void APP_CoapEquipo4Cb(coapSessionStatus_t sessionStatus,void *pData,coapSession_t *pSession,uint32_t dataLen);
-static void APP_TimmerEquipo4Cb(void *pParam);
+static void APP_CoapEquipo4Cb(coapSessionStatus_t sessionStatus,void *pData,coapSession_t *pSession,uint32_t dataLen);             /////////CAMBIOS
+static void APP_TimmerEquipo4Cb(void *pParam);                  /////////CAMBIOS
 
 /*==================================================================================================
 Public global variables declarations
@@ -166,7 +165,6 @@ Public global variables declarations
 const coapUriPath_t gAPP_LED_URI_PATH  = {SizeOfString(APP_LED_URI_PATH), (uint8_t *)APP_LED_URI_PATH};
 const coapUriPath_t gAPP_TEMP_URI_PATH = {SizeOfString(APP_TEMP_URI_PATH), (uint8_t *)APP_TEMP_URI_PATH};
 const coapUriPath_t gAPP_SINK_URI_PATH = {SizeOfString(APP_SINK_URI_PATH), (uint8_t *)APP_SINK_URI_PATH};
-
 
 /* Application state/mode */
 appDeviceState_t gAppDeviceState[THR_MAX_INSTANCES];
@@ -189,7 +187,7 @@ extern bool_t gEnable802154TxLed;
 
 /*@Lab - Declare URI path for Accelerometer data*/
 const coapUriPath_t gAPP_ACCEL_URI_PATH = {SizeOfString(APP_ACCEL_URI_PATH), (uint8_t *)APP_ACCEL_URI_PATH};
-const coapUriPath_t gAPP_EQUIPO4_URI_PATH = {SizeOfString(APP_EQUIPO4_URI_PATH), (uint8_t *)APP_EQUIPO4_URI_PATH};
+const coapUriPath_t gAPP_EQUIPO4_URI_PATH = {SizeOfString(APP_EQUIPO4_URI_PATH), (uint8_t *)APP_EQUIPO4_URI_PATH};              /////////CAMBIOS
 
 /*==================================================================================================
 Public functions
@@ -220,7 +218,6 @@ void APP_Init
     /* Use one instance ID for application */
     mThrInstanceId = gThrDefaultInstanceId_c;
 
-
 #if THR_ENABLE_EVENT_MONITORING
     /* Initialize event monitoring */
     APP_InitEventMonitor(mThrInstanceId);
@@ -230,7 +227,6 @@ void APP_Init
     {
         /* Initialize CoAP demo */
         APP_InitCoapDemo();
-
 
 #if USE_TEMPERATURE_SENSOR
         /* Initialize Temperature sensor/ADC module*/
@@ -243,19 +239,18 @@ void APP_Init
         BOARD_InitI2C();
         if (APP_InitAccelerometer(Accel_Callback) != kStatus_Success)
         {
-        	shell_printf("\r\nAccelerometer initialization failed\r\n");
+            shell_printf("\r\nAccelerometer initialization failed\r\n");
         }
         else
         {
-        	shell_printf("\r\nAccelerometer OK\r\n");
+            shell_printf("\r\nAccelerometer OK\r\n");
         }
 #endif
         /*@Lab - Allocate timer for the LED off callback */
         if(mLEDOffTimerID == gTmrInvalidTimerID_c)
         {
-        	mLEDOffTimerID = TMR_AllocateTimer();
-        	mEquipo4GETTimerID = TMR_AllocateTimer();
-
+            mLEDOffTimerID = TMR_AllocateTimer();
+            
         }
 
 #if THREAD_USE_THCI && THR_ENABLE_MGMT_DIAGNOSTICS
@@ -366,6 +361,7 @@ void Stack_to_APP_Handler
             APP_SetMode(mThrInstanceId, gDeviceMode_Application_c);
             /* Enable LED for 80215.4 tx activity */
             gEnable802154TxLed = TRUE;
+
 #if UDP_ECHO_PROTOCOL
             ECHO_ProtocolInit(mpAppThreadMsgQueue);
 #endif
@@ -373,18 +369,14 @@ void Stack_to_APP_Handler
             APP_EnableAccelerometer();
             gEnable802154TxLed = FALSE; //Disable default TX activity LED
 
-            /* Allocate Equipo4 Timmer */
-
-
+            mEquipo4GETTimerID = TMR_AllocateTimer();        /////////CAMBIOS
+            TMR_StartTimer(mEquipo4GETTimerID, gTmrSingleShotTimer_c, 1000, APP_TimmerEquipo4Cb, NULL);     /////////CAMBIOS
             break;
 
         case gThrEv_GeneralInd_ConnectingFailed_c:
         case gThrEv_GeneralInd_Disconnected_c:
             APP_SetMode(mThrInstanceId, gDeviceMode_Configuration_c);
             App_UpdateStateLeds(gDeviceState_NwkFailure_c);
-
-            TMR_StopTimer(mEquipo4GETTimerID);
-
             break;
 
 #if gLpmIncluded_d
@@ -462,7 +454,6 @@ void App_SedWakeUpFromKeyBoard
     if(gAppSwWakeUpTimer != gTmrInvalidTimerID_c)
     {
         TMR_StartTimer(gAppSwWakeUpTimer, gTmrSingleShotTimer_c, APP_SW_WAKE_UP_TIMEOUT, APP_SwWakeUpCb, NULL);
-
     }
 }
 /*==================================================================================================
@@ -481,8 +472,8 @@ static void APP_InitCoapDemo
     coapRegCbParams_t cbParams[] =  {{APP_CoapLedCb,  (coapUriPath_t *)&gAPP_LED_URI_PATH},
                                      {APP_CoapTempCb, (coapUriPath_t *)&gAPP_TEMP_URI_PATH},
                                      {APP_CoapSinkCb, (coapUriPath_t *)&gAPP_SINK_URI_PATH},
-    								 {APP_CoapAccelCb, (coapUriPath_t*)&gAPP_ACCEL_URI_PATH},
-									 {APP_CoapEquipo4Cb, (coapUriPath_t *)&gAPP_EQUIPO4_URI_PATH},}; //@Lab - Register Accelerometer CoAP service
+                                     {APP_CoapAccelCb, (coapUriPath_t*)&gAPP_ACCEL_URI_PATH},   //@Lab - Register Accelerometer CoAP service
+                                     {APP_CoapEquipo4Cb, (coapUriPath_t *)&gAPP_EQUIPO4_URI_PATH}};     //////  CAMBIOS
     /* Register Services in COAP */
     coapStartUnsecParams_t coapParams = {COAP_DEFAULT_PORT, AF_INET6};
     mAppCoapInstId = COAP_CreateInstance(NULL, &coapParams, gIpIfSlp0_c, (coapRegCbParams_t *) cbParams,
@@ -521,8 +512,6 @@ static void APP_ConfigModeHandleKeyboard
                 {
                     /* User can treat join failure according to their application */
                 }
-
-
             }
             break;
         case gKBD_EventLongPB1_c:
@@ -568,12 +557,11 @@ static void APP_AppModeHandleKeyboard
         case gKBD_EventPB1_c:
             /* Data sink create */
             //(void)NWKU_SendMsg(APP_SendDataSinkCreate, NULL, mpAppThreadMsgQueue);
-        	/*@Lab - Report Accelerometer value */
-        	(void)NWKU_SendMsg(APP_ReportAccel, (void*)gAccel_All_c, mpAppThreadMsgQueue);
-        	Led_UpdateRgbState(255,0,255);
-        	App_UpdateStateLeds(gDeviceState_AppLedRgb_c);
-        	TMR_StartSingleShotTimer(mLEDOffTimerID, 70, timerTurnOffLEDsCB, NULL);
-        	TMR_StartSingleShotTimer(mEquipo4GETTimerID, 1000, APP_TimmerEquipo4Cb, NULL);
+            /*@Lab - Report Accelerometer value */
+            (void)NWKU_SendMsg(APP_ReportAccel, (void*)gAccel_All_c, mpAppThreadMsgQueue);
+            Led_UpdateRgbState(255,0,255);
+            App_UpdateStateLeds(gDeviceState_AppLedRgb_c);
+            TMR_StartSingleShotTimer(mLEDOffTimerID, 70, timerTurnOffLEDsCB, NULL);
             break;
 #if gKBD_KeysCount_c > 1
         case gKBD_EventPB2_c:
@@ -1280,7 +1268,7 @@ Private debug functions
 ***************************************************************************************************/
 static void timerTurnOffLEDsCB(void *param)
 {
-	LED_TurnOffAllLeds();
+    LED_TurnOffAllLeds();
 }
 /*==================================================================================================
 Accelerometer functions
@@ -1294,37 +1282,37 @@ Accelerometer functions
 ***************************************************************************************************/
 static void APP_ReportAccel
 (
-		void *pParam
+        void *pParam
 )
 {
-	coapSession_t *pSession = NULL;
-	/* Get Accel */
-	uint8_t *pAccelString = App_GetAccelDataString((uint32_t)pParam);
-	uint32_t ackPloadSize;
-	ifHandle_t ifHandle = THR_GetIpIfPtrByInstId(mThrInstanceId);
-	if(!IP_IF_IsMyAddr(ifHandle->ifUniqueId, &gCoapDestAddress))
-	{
-		pSession = COAP_OpenSession(mAppCoapInstId);
-		if(NULL != pSession)
-		{
-			coapMsgTypesAndCodes_t coapMessageType = gCoapMsgTypeNonPost_c;
-			pSession->pCallback = NULL;
-			FLib_MemCpy(&pSession->remoteAddr, &gCoapDestAddress, sizeof(ipAddr_t));
-			ackPloadSize = strlen((char *)pAccelString);
-			COAP_SetUriPath(pSession, (coapUriPath_t *)&gAPP_ACCEL_URI_PATH);
-			if(!IP6_IsMulticastAddr(&gCoapDestAddress))
-			{
-				coapMessageType = gCoapMsgTypeConPost_c;
-				pSession->pCallback = APP_CoapGenericCallback;
-			}
-			COAP_Send(pSession, coapMessageType, pAccelString, ackPloadSize);
-		}
-	}
-	/* Print Accel in shell */
-	shell_write("\r");
-	shell_write((char *)pAccelString);
-	shell_refresh();
-	MEM_BufferFree(pAccelString);
+    coapSession_t *pSession = NULL;
+    /* Get Accel */
+    uint8_t *pAccelString = App_GetAccelDataString((uint32_t)pParam);
+    uint32_t ackPloadSize;
+    ifHandle_t ifHandle = THR_GetIpIfPtrByInstId(mThrInstanceId);
+    if(!IP_IF_IsMyAddr(ifHandle->ifUniqueId, &gCoapDestAddress))
+    {
+        pSession = COAP_OpenSession(mAppCoapInstId);
+        if(NULL != pSession)
+        {
+            coapMsgTypesAndCodes_t coapMessageType = gCoapMsgTypeNonPost_c;
+            pSession->pCallback = NULL;
+            FLib_MemCpy(&pSession->remoteAddr, &gCoapDestAddress, sizeof(ipAddr_t));
+            ackPloadSize = strlen((char *)pAccelString);
+            COAP_SetUriPath(pSession, (coapUriPath_t *)&gAPP_ACCEL_URI_PATH);
+            if(!IP6_IsMulticastAddr(&gCoapDestAddress))
+            {
+                coapMessageType = gCoapMsgTypeConPost_c;
+                pSession->pCallback = APP_CoapGenericCallback;
+            }
+            COAP_Send(pSession, coapMessageType, pAccelString, ackPloadSize);
+        }
+    }
+    /* Print Accel in shell */
+    shell_write("\r");
+    shell_write((char *)pAccelString);
+    shell_refresh();
+    MEM_BufferFree(pAccelString);
 }
 /*!*************************************************************************************************
 \private
@@ -1339,71 +1327,71 @@ coapSession_t *pSession, uint32_t dataLen)
 ***************************************************************************************************/
 static void APP_CoapAccelCb
 (
-		coapSessionStatus_t sessionStatus,
-		void *pData,
-		coapSession_t *pSession,
-		uint32_t dataLen
+        coapSessionStatus_t sessionStatus,
+        void *pData,
+        coapSession_t *pSession,
+        uint32_t dataLen
 )
 {
-	uint8_t *pAccelString = NULL;
-	uint32_t ackPloadSize = 0, maxDisplayedString = ACCEL_BUFF_SIZE;
-	/*Param to know which data will be return from the axis*/
-	uint8_t axis_param = 0;
-	/* Send CoAP ACK */
-	if(gCoapGET_c == pSession->code)
-	{
-		/* Get Axis */
-		if ((FLib_MemCmp(pData, "xyz",3)) || (FLib_MemCmp(pData, "all",3)))
-		{
-			axis_param = gAccel_All_c;
-		}
-		else if (FLib_MemCmp(pData, "x",1))
-		{
-			axis_param = gAccel_X_c;
-		}
-		else if (FLib_MemCmp(pData, "y",1))
-		{
-			axis_param = gAccel_Y_c;
-		}
-		else if (FLib_MemCmp(pData, "z",1))
-		{
-			axis_param = gAccel_Z_c;
-		}
-		pAccelString = App_GetAccelDataString((uint32_t)axis_param);
-		ackPloadSize = strlen((char*)pAccelString);
-	}
-	/* Do not parse the message if it is duplicated */
-	else if((gCoapPOST_c == pSession->code) && (sessionStatus == gCoapSuccess_c))
-	{
-		if(NULL != pData)
-		{
-			char addrStr[INET6_ADDRSTRLEN];
-			uint8_t shellStr[ACCEL_BUFF_SIZE];
-			ntop(AF_INET6, &pSession->remoteAddr, addrStr, INET6_ADDRSTRLEN);
-			shell_write("\r");
-			if(0 != dataLen)
-			{
-				/* Prevent from buffer overload */
-				(dataLen > maxDisplayedString) ? (dataLen = maxDisplayedString) : (dataLen);
-				shellStr[dataLen]='\0';
-				FLib_MemCpy(shellStr,pData,dataLen);
-				shell_printf((char*)shellStr);
-			}
-			shell_printf("\tFrom IPv6 Address: %s\n\r", addrStr);
-			shell_refresh();
-		}
-	}
-	if(gCoapConfirmable_c == pSession->msgType)
-	{
-		if(gCoapGET_c == pSession->code)
-		{
-			COAP_Send(pSession, gCoapMsgTypeAckSuccessChanged_c, pAccelString, ackPloadSize);
-		}
-		else
-		{
-			COAP_Send(pSession, gCoapMsgTypeAckSuccessChanged_c, NULL, 0);
-		}
-	}
+    uint8_t *pAccelString = NULL;
+    uint32_t ackPloadSize = 0, maxDisplayedString = ACCEL_BUFF_SIZE;
+    /*Param to know which data will be return from the axis*/
+    uint8_t axis_param = 0;
+    /* Send CoAP ACK */
+    if(gCoapGET_c == pSession->code)
+    {
+        /* Get Axis */
+        if ((FLib_MemCmp(pData, "xyz",3)) || (FLib_MemCmp(pData, "all",3)))
+        {
+            axis_param = gAccel_All_c;
+        }
+        else if (FLib_MemCmp(pData, "x",1))
+        {
+            axis_param = gAccel_X_c;
+        }
+        else if (FLib_MemCmp(pData, "y",1))
+        {
+            axis_param = gAccel_Y_c;
+        }
+        else if (FLib_MemCmp(pData, "z",1))
+        {
+            axis_param = gAccel_Z_c;
+        }
+        pAccelString = App_GetAccelDataString((uint32_t)axis_param);
+        ackPloadSize = strlen((char*)pAccelString);
+    }
+    /* Do not parse the message if it is duplicated */
+    else if((gCoapPOST_c == pSession->code) && (sessionStatus == gCoapSuccess_c))
+    {
+        if(NULL != pData)
+        {
+            char addrStr[INET6_ADDRSTRLEN];
+            uint8_t shellStr[ACCEL_BUFF_SIZE];
+            ntop(AF_INET6, &pSession->remoteAddr, addrStr, INET6_ADDRSTRLEN);
+            shell_write("\r");
+            if(0 != dataLen)
+            {
+                /* Prevent from buffer overload */
+                (dataLen > maxDisplayedString) ? (dataLen = maxDisplayedString) : (dataLen);
+                shellStr[dataLen]='\0';
+                FLib_MemCpy(shellStr,pData,dataLen);
+                shell_printf((char*)shellStr);
+            }
+            shell_printf("\tFrom IPv6 Address: %s\n\r", addrStr);
+            shell_refresh();
+        }
+    }
+    if(gCoapConfirmable_c == pSession->msgType)
+    {
+        if(gCoapGET_c == pSession->code)
+        {
+            COAP_Send(pSession, gCoapMsgTypeAckSuccessChanged_c, pAccelString, ackPloadSize);
+        }
+        else
+        {
+            COAP_Send(pSession, gCoapMsgTypeAckSuccessChanged_c, NULL, 0);
+        }
+    }
 }
 
 /*!*************************************************************************************************
@@ -1415,11 +1403,11 @@ interrupt events.
 ***************************************************************************************************/
 static void Accel_Callback(uint8_t events)
 {
-	if((mAccLastEvent == gAppAccNoEvent_c))
-	{
-		mAccLastEvent = events;
-		APP_AccCallback();
-	}
+    if((mAccLastEvent == gAppAccNoEvent_c))
+    {
+        mAccLastEvent = events;
+        APP_AccCallback();
+    }
 }
 /*!*************************************************************************************************
 \fn static void APP_AccCallback(void)
@@ -1428,106 +1416,89 @@ static void Accel_Callback(uint8_t events)
 ***************************************************************************************************/
 static void APP_AccCallback(void)
 {
-	uint8_t redValue = 0, greenValue = 0, blueValue = 0;
-	TMR_StopTimer(mLEDOffTimerID);
-	switch(mAccLastEvent)
-	{
-	case gAccel_X_c:
-		NWKU_SendMsg(APP_ReportAccel, (void*)gAccel_X_c, mpAppThreadMsgQueue); //Send X Accel
-		redValue = 255;
-		break;
-	case gAccel_Y_c:
-		NWKU_SendMsg(APP_ReportAccel, (void*)gAccel_Y_c, mpAppThreadMsgQueue); //Send Y Accel
-		greenValue = 255;
-		break;
-	case gAccel_Z_c:
-		NWKU_SendMsg(APP_ReportAccel, (void*)gAccel_Z_c, mpAppThreadMsgQueue); //Send Z Accel
-		blueValue = 255;
-		break;
-	default:
-		break;
-	}
-
-    shell_printf("\t TEST DIJE\n\r");
-	Led_UpdateRgbState(redValue, greenValue, blueValue);
-	App_UpdateStateLeds(gDeviceState_AppLedRgb_c);
-	mAccLastEvent = gAppAccNoEvent_c;
-	TMR_StartSingleShotTimer(mLEDOffTimerID, 100, timerTurnOffLEDsCB, NULL);
+    uint8_t redValue = 0, greenValue = 0, blueValue = 0;
+    TMR_StopTimer(mLEDOffTimerID);
+    switch(mAccLastEvent)
+    {
+    case gAccel_X_c:
+        NWKU_SendMsg(APP_ReportAccel, (void*)gAccel_X_c, mpAppThreadMsgQueue); //Send X Accel
+        redValue = 255;
+        break;
+    case gAccel_Y_c:
+        NWKU_SendMsg(APP_ReportAccel, (void*)gAccel_Y_c, mpAppThreadMsgQueue); //Send Y Accel
+        greenValue = 255;
+        break;
+    case gAccel_Z_c:
+        NWKU_SendMsg(APP_ReportAccel, (void*)gAccel_Z_c, mpAppThreadMsgQueue); //Send Z Accel
+        blueValue = 255;
+        break;
+    default:
+        break;
+    }
+    Led_UpdateRgbState(redValue, greenValue, blueValue);
+    App_UpdateStateLeds(gDeviceState_AppLedRgb_c);
+    mAccLastEvent = gAppAccNoEvent_c;
+    TMR_StartSingleShotTimer(mLEDOffTimerID, 100, timerTurnOffLEDsCB, NULL);
 }
+// @}
 
 
+//////// CAMBIOS
+
+static void APP_ReportEquipo4(void *pParam){
+    coapSession_t *pSession = NULL;
+    uint8_t *pTempString = "";
+    uint32_t ackPloadSize;
+    ifHandle_t ifHandle = THR_GetIpIfPtrByInstId(mThrInstanceId);
+
+    if(!IP_IF_IsMyAddr(ifHandle->ifUniqueId, &gCoapDestAddress))
+    {
+        pSession = COAP_OpenSession(mAppCoapInstId);
+
+        if(NULL != pSession)
+        {
+            coapMsgTypesAndCodes_t coapMessageType = gCoapMsgTypeConGet_c;
+
+            pSession->pCallback = NULL;
+            FLib_MemCpy(&pSession->remoteAddr, &gCoapDestAddress, sizeof(ipAddr_t));
+            ackPloadSize = strlen((char *)pTempString);
+            COAP_SetUriPath(pSession, (coapUriPath_t *)&gAPP_EQUIPO4_URI_PATH);
+            COAP_Send(pSession, coapMessageType, pTempString, ackPloadSize);
+        }
+    }
+}
 
 
 static void APP_CoapEquipo4Cb(coapSessionStatus_t sessionStatus,void *pData,coapSession_t *pSession,uint32_t dataLen){
-
-	char addrStr[INET6_ADDRSTRLEN];
-	uint8_t shellStr[ACCEL_BUFF_SIZE];
-	ntop(AF_INET6, &pSession->remoteAddr, addrStr, INET6_ADDRSTRLEN);
-	shell_write("\r");
-
-	if(0 != dataLen)
-	{
-		/* Prevent from buffer overload */
-		shellStr[dataLen]='\0';
-		FLib_MemCpy(shellStr,pData,dataLen);
-		//shell_printf((char*)shellStr);
-	}
-	shell_printf("\t Counter %s From IPv6 Address: %s\n\r",(char*)shellStr, addrStr);
-	shell_refresh();
-
-	if(gCoapGET_c == pSession->code)
-	{
-		/* Get Axis */
-
-
-	}
-	/* Do not parse the message if it is duplicated */
-	else if((gCoapPOST_c == pSession->code) && (sessionStatus == gCoapSuccess_c))
-	{
-
-	}
-	if(gCoapConfirmable_c == pSession->msgType)
-	{
-
-	}
+    uint32_t ackPloadSize = 0, maxDisplayedString = ACCEL_BUFF_SIZE;
+    if(gCoapPOST_c == pSession->code)
+    {
+        if(NULL != pData)
+        {
+            char addrStr[INET6_ADDRSTRLEN];
+            uint8_t shellStr[ACCEL_BUFF_SIZE];
+            ntop(AF_INET6, &pSession->remoteAddr, addrStr, INET6_ADDRSTRLEN);
+            shell_write("\r");
+            if(0 != dataLen)
+            {
+                /* Prevent from buffer overload */
+                (dataLen > maxDisplayedString) ? (dataLen = maxDisplayedString) : (dataLen);
+                shellStr[dataLen]='\0';
+                FLib_MemCpy(shellStr,pData,dataLen);
+                shell_write("\t**************************************************************\n\r");
+                shell_printf("\tCoap data from IPv6 Address: %s\n\r", addrStr);
+            
+                shell_printf("\tPayload: %s \n\r",(char*)shellStr);
+            }
+        }
+    }
 }
 
+
 static void APP_TimmerEquipo4Cb(void *pParam){
-	TMR_StopTimer(mEquipo4GETTimerID);
-	//coapSession_t *pSession = NULL;
-	    /* Get Temperature */
-	   uint8_t *pTempString = "algo";
-	   /*  uint32_t ackPloadSize;
-	    ifHandle_t ifHandle = THR_GetIpIfPtrByInstId(mThrInstanceId);
+    TMR_StopTimer(mEquipo4GETTimerID);
+    NWKU_SendMsg(APP_ReportEquipo4, (void*)"ctr", mpAppThreadMsgQueue);
+    TMR_StartSingleShotTimer(mEquipo4GETTimerID, 1000, APP_TimmerEquipo4Cb, NULL);
 
-	    if(!IP_IF_IsMyAddr(ifHandle->ifUniqueId, &gCoapDestAddress))
-	    {
-	        pSession = COAP_OpenSession(mAppCoapInstId);
 
-	        if(NULL != pSession)
-	        {
-	            coapMsgTypesAndCodes_t coapMessageType = gCoapMsgTypeConGet_c;
-
-	            pSession->pCallback = NULL;
-	            FLib_MemCpy(&pSession->remoteAddr, &gCoapDestAddress, sizeof(ipAddr_t));
-	            ackPloadSize = strlen((char *)pTempString);
-	            COAP_SetUriPath(pSession, (coapUriPath_t *)&gAPP_EQUIPO4_URI_PATH);
-
-	            if(!IP6_IsMulticastAddr(&gCoapDestAddress))
-	            {
-	                coapMessageType = gCoapMsgTypeConPost_c;
-	                pSession->pCallback = APP_CoapGenericCallback;
-	            }
-
-	            COAP_Send(pSession, coapMessageType, pTempString, ackPloadSize);
-	        }
-	    }
-	    */
-	    /* Print temperature in shell */
-	    shell_write("\r");
-	    shell_printf("%s \r\n",(char *)pTempString);
-	    shell_refresh();
-	    MEM_BufferFree(pTempString);
-
-	    TMR_StartSingleShotTimer(mEquipo4GETTimerID, 1000, APP_TimmerEquipo4Cb, NULL);
 }
